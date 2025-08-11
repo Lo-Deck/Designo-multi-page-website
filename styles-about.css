@@ -1,0 +1,240 @@
+
+
+/*MAIN */
+
+.about .main-header{
+  background: url('./assets/about/mobile/bg-pattern-hero-about-mobile.svg') no-repeat calc(50% - 16rem) calc(50% + 18rem),
+              #E7816B;
+  max-width: var(--width-375-689);
+  padding: 0;
+  border-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+}
+
+.about .main-header .image-header{
+  width: 100%;
+  border-top-left-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+  border-top-right-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+}
+
+.about .main-header .container-text{
+  max-width: var(--width-340-573);
+  margin: 0 auto;
+  padding: clamp(4.125rem, 5.8349rem + -3.5623vw, 5rem) 0 clamp(4.125rem, 6.3235rem + -4.5802vw, 5.25rem);
+}
+
+.about-leaf{
+  display: none;
+}
+
+
+/*DESCRIPTION*/
+
+.description {
+  max-width: var(--width-375-689);
+  background: url('./assets/shared/desktop/bg-pattern-three-circles.svg') no-repeat calc(50% + 6.5rem) calc(50% + 11rem),
+              #FDF3F0;
+  border-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+  text-align: center;
+  margin: clamp(0rem, -7.1565rem + 30.5344vw, 7.5rem) auto 7.5rem;
+}
+
+.description .image-description{
+  width: 100%;
+  border-top-left-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+  border-top-right-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+}
+
+.description .container-text{
+  max-width: var(--width-340-573);
+  margin: 0 auto;
+  padding: clamp(4.125rem, 5.8349rem + -3.5623vw, 5rem) 0 clamp(4.125rem, 6.3235rem + -4.5802vw, 5.25rem);
+}
+
+.description .container-text .title{
+  color: #E7816B;
+  margin-bottom: 1.75rem;
+}
+
+.description .container-text .text{
+  color: #333136;
+}
+
+.description .container-text .text:nth-of-type(1){
+  margin-bottom: 1.5rem;
+}
+
+
+/*LOCATION*/
+
+.location {
+  max-width: 21.875rem;
+  margin: 0 auto 7.5rem;
+  text-align: center;
+}
+
+.location:not(:last-of-type) {
+  margin-bottom: 5rem;
+}
+
+.location .container-image-location{
+  max-width: 12.625rem;
+  max-height: 12.625rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.location .background{
+  width: 100%;
+  height: 100%;
+  background: url('./assets/shared/desktop/bg-pattern-small-circle.svg') no-repeat center / cover;
+  position: absolute; 
+  z-index: -1;
+}
+
+.location:nth-of-type(1) .background{
+  transform: rotate(80deg);
+}
+
+.locationation:nth-of-type(2) .background{
+  transform: rotate(260deg);
+}
+
+.location:nth-of-type(3) .background{
+  transform: rotate(260deg);
+}
+
+.location .image-location {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.location .text{
+  margin: 2.5rem auto 2rem;
+}
+
+.location .button-frame{
+  background: #E7816B;
+  color: #fff;
+  margin: 0 auto;
+}
+
+
+
+/*** TABLET ***/
+
+@media screen and (min-width: 48rem){
+
+
+  /*MAIN */
+
+  .about .main-header{
+    background: url('./assets/about/desktop/bg-pattern-hero-about-desktop.svg') no-repeat calc(50% - 10rem) calc(50% - 6rem),
+                #E7816B;
+    max-width: var(--width-689-1110);
+  }
+
+
+  /*DESCRIPTION*/
+
+  .description {
+    max-width: var(--width-689-1110);
+  }
+
+}
+
+
+
+/*** DESKTOP ***/
+
+@media screen and (min-width: 75rem){
+
+  .about{
+    background: url('./assets/shared/desktop/bg-pattern-leaf.svg') no-repeat calc(50% - 13.5rem) 30rem,
+                url('./assets/shared/desktop/bg-pattern-leaf.svg') no-repeat calc(50% + 38rem) 111rem;
+  }
+
+  /*MAIN */
+
+  .about .main-header{
+    background: url('./assets/about/desktop/bg-pattern-hero-about-desktop.svg') no-repeat calc(50% - 15rem) calc(50% - 5rem),
+                #E7816B;
+    max-width: 69.375rem;
+    display: flex;
+    flex-direction: row-reverse;    
+    justify-content: space-between;
+    align-items: center;
+    height: 30rem;
+  }
+
+  .about .main-header .image-header{
+    width: 29.75rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+    border-bottom-right-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+  }
+
+  .about .main-header .container-text{
+    max-width: 28.625rem;
+    margin: 0;
+    margin-left: 5.75rem;
+  }
+
+
+  /*DESCRIPTION*/
+
+  .description {
+    max-width: 69.375rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40rem;
+    text-align: left;
+    margin: 10rem auto 10rem;
+  }
+
+  .description:nth-of-type(2){
+    flex-direction: row-reverse;
+    background: url('./assets/shared/desktop/bg-pattern-two-circles.svg') no-repeat 0 100%,
+              #FDF3F0;
+  }
+
+  .description .image-description{
+    width: 29.75rem;
+    border-top-right-radius: 0;
+    border-top-left-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+    border-bottom-left-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+  }
+
+  .description:nth-of-type(2) .image-description{
+    border-top-right-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+    border-top-left-radius: 0;
+    border-bottom-right-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+    border-bottom-left-radius: 0;
+  }
+
+  .description .container-text{
+    max-width: 27.875rem;
+  }
+
+
+  /*LOCATION*/
+
+  .container-location{
+    max-width: 69.375rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .location {
+    margin: 0;
+  }
+
+  .location:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+
+}
+

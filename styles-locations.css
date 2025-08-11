@@ -1,0 +1,135 @@
+
+/* MAIN */
+
+.container-section-map{
+  max-width: var(--width-375-689);
+  margin: 0 auto;
+}
+
+.section-map{
+  margin-bottom: clamp(2.5rem, -2.271rem + 20.3562vw, 7.5rem);
+
+  position: relative;
+  z-index: 1;
+
+}
+
+.section-map:nth-of-type(3){
+  margin-bottom: 7.5rem;
+}
+
+.section-map .image-map{
+  background: rgb(176, 246, 255);
+  height: 20rem;
+  margin-bottom: clamp(0rem, -1.7891rem + 7.6336vw, 1.875rem);
+  border-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+  scroll-margin-top: 6.25rem;
+}
+
+.section-map .container-text{
+  background: url('./assets/shared/desktop/bg-pattern-three-circles.svg') no-repeat top left,
+              #FDF3F0;
+  text-align: center;
+  padding: 5rem 0; 
+  border-radius: clamp(0rem, -0.9542rem + 4.0712vw, 1rem);
+}
+
+.section-map .container-text .title{
+  color: #E7816B;
+  margin-bottom: 1.75rem;
+}
+
+.section-map .container-text address{
+  color: #333136;
+}
+
+.section-map .container-text address p:nth-of-type(3){
+  margin-bottom: 1.5rem;
+}
+
+.text-mouse-map-hover{
+  display: none;
+}
+
+
+
+/*** TABLET ***/
+
+@media screen and (min-width: 48rem){
+
+
+/* MAIN */
+
+  .section-map .container-text{
+    background: url('./assets/shared/desktop/bg-pattern-three-circles.svg') no-repeat bottom left,
+              #FDF3F0;
+    text-align: left;
+    height: 20.375rem; 
+    padding: 5.5rem 4.625rem 4rem;
+  }
+
+  .section-map .container-text address{
+    display: flex;
+  }
+
+  .section-map .container-text address div:nth-of-type(1){
+    margin-right: 7.5rem;
+  }
+
+  .text-mouse-map-hover{
+    content: 'Left Ctrl to zoom';
+    display: none;
+    color: #1B1D23;
+    width: 5rem;
+    height: 2rem;
+    transform: translateX(2rem);
+    position: fixed;
+    z-index: 99999;
+    cursor: grab;
+  }
+
+
+}
+
+
+
+/*** DESKTOP ***/
+
+@media screen and (min-width: 75rem){
+
+
+/* MAIN */
+
+  .container-section-map{
+    max-width: 69.375rem;
+  }
+
+  .section-map{
+    width: 69.375rem;
+    margin: 0 auto 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .section-map:nth-of-type(2){
+    flex-direction: row;
+  }
+
+  .section-map:nth-of-type(3){
+    margin-bottom: 10rem;
+  }
+
+  .section-map .image-map{
+    margin: 0;
+    width: 21.875rem;
+    height: 20.375rem;
+  }
+
+  .section-map .container-text{
+    width: 45.625rem;
+  }
+
+}
+
