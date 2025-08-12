@@ -1,6 +1,13 @@
 
 /* MAIN */
 
+.sr-only{
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
 .container-section-map{
   max-width: var(--width-375-689);
   margin: 0 auto;
@@ -8,10 +15,8 @@
 
 .section-map{
   margin-bottom: clamp(2.5rem, -2.271rem + 20.3562vw, 7.5rem);
-
   position: relative;
   z-index: 1;
-
 }
 
 .section-map:nth-of-type(3){
