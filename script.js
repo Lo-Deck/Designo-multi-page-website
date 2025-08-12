@@ -2,6 +2,9 @@
 /* OPEN CLOSE MENU */
 
 const btnMenu = document.querySelector('.button-menu');
+const menu = document.querySelector('.menu');
+const backgroundMenu = document.querySelector('.background-menu');
+const imgBtnMenu = document.querySelector('.button-menu img');
 
 let isMenuClicked = false;
 
@@ -10,14 +13,14 @@ btnMenu.addEventListener('click', () => {
     isMenuClicked = !isMenuClicked;
 
     if(isMenuClicked){
-        document.querySelector('.menu').style.display = 'block';
-        document.querySelector('.background-menu').style.display = 'block';
-        document.querySelector('.button-menu img').src = './assets/shared/mobile/icon-close.svg';
+        menu.style.display = 'block';
+        backgroundMenu.style.display = 'block';
+        imgBtnMenu.src = './assets/shared/mobile/icon-close.svg';
     }
     else{
-        document.querySelector('.menu').style.display = 'none';
-        document.querySelector('.background-menu').style.display = 'none';
-        document.querySelector('.button-menu img').src = './assets/shared/mobile/icon-hamburger.svg';
+        menu.style.display = 'none';
+        backgroundMenu.style.display = 'none';
+        imgBtnMenu.src = './assets/shared/mobile/icon-hamburger.svg';
     }
 
 });
@@ -30,12 +33,13 @@ if(document.querySelector('.contact')){
 
     const myForm = document.querySelector('#myForm');
     const formInputs = myForm.querySelectorAll('.input, textarea'); 
+    const arrayInputError = document.querySelectorAll('.container-input span.error');
 
     formInputs.forEach( (input, index) => {
 
         input.addEventListener('input', () => {
-            document.querySelectorAll('.container-input span.error')[index].textContent = '';
-            document.querySelectorAll('.container-input span.error')[index].classList.remove('logo-error');
+            arrayInputError[index].textContent = '';
+            arrayInputError[index].classList.remove('logo-error');
         });
 
     });
@@ -44,37 +48,37 @@ if(document.querySelector('.contact')){
     function validateInput(input, index){
 
         if (input.validity.valueMissing) {
-            document.querySelectorAll('.container-input span.error')[index].textContent = `Can't be empty`;
-            document.querySelectorAll('.container-input span.error')[index].classList.add('logo-error');
+            arrayInputError[index].textContent = `Can't be empty`;
+            arrayInputError[index].classList.add('logo-error');
             return false;
         }
 
         if (input.validity.tooShort) {
-            document.querySelectorAll('.container-input span.error')[index].textContent = `Input too short`;
-            document.querySelectorAll('.container-input span.error')[index].classList.add('logo-error');
+            arrayInputError[index].textContent = `Input too short`;
+            arrayInputError[index].classList.add('logo-error');
             return false;
         }
 
         if (input.validity.tooLong) {
-            document.querySelectorAll('.container-input span.error')[index].textContent = `Input too long`;
-            document.querySelectorAll('.container-input span.error')[index].classList.add('logo-error');
+            arrayInputError[index].textContent = `Input too long`;
+            arrayInputError[index].classList.add('logo-error');
             return false;
         }
 
         if (input.type === 'email' && input.validity.typeMismatch) {
-            document.querySelectorAll('.container-input span.error')[index].textContent = `Not a valid email address`;
-            document.querySelectorAll('.container-input span.error')[index].classList.add('logo-error');
+            arrayInputError[index].textContent = `Not a valid email address`;
+            arrayInputError[index].classList.add('logo-error');
             return false;
         }
 
         if (input.type === 'tel' && input.validity.patternMismatch ) {
-            document.querySelectorAll('.container-input span.error')[index].textContent = `Not a phone number`;
-            document.querySelectorAll('.container-input span.error')[index].classList.add('logo-error');
+            arrayInputError[index].textContent = `Not a phone number`;
+            arrayInputError[index].classList.add('logo-error');
             return false;
         }
 
-        document.querySelectorAll('.container-input span.error')[index].textContent = '';
-        document.querySelectorAll('.container-input span.error')[index].classList.remove('logo-error');
+        arrayInputError[index].textContent = '';
+        arrayInputError[index].classList.remove('logo-error');
         return true;
 
     }  
@@ -105,7 +109,6 @@ if(document.querySelector('.contact')){
 
 if(document.querySelector('.locations')){
 
-    
 
     const mapCanada = L.map('map-canada', { scrollWheelZoom: false }).setView([43.64397, -79.38190], 11);
 
@@ -197,7 +200,7 @@ if(document.querySelector('.locations')){
         const mapContainer = document.querySelectorAll('.image-map');
         const textOnMouseMove = document.querySelector(".text-mouse-map-hover");
 
-        mapContainer.forEach( (map, index) => {
+        mapContainer.forEach( (map) => {
 
             map.addEventListener('mousemove', (event) => {
 
@@ -210,7 +213,7 @@ if(document.querySelector('.locations')){
         });
 
 
-        mapContainer.forEach( (map, index) => {
+        mapContainer.forEach( (map) => {
 
             map.addEventListener('mouseout', () => {
                 textOnMouseMove.style.display = 'none';
@@ -223,7 +226,7 @@ if(document.querySelector('.locations')){
 
             if (event.key === 'Control') { 
 
-                [mapCanada, mapAustralia, mapUK].forEach( (map, index) => {
+                [mapCanada, mapAustralia, mapUK].forEach( (map) => {
                     map.scrollWheelZoom.enable();    
                 });
         
@@ -236,7 +239,7 @@ if(document.querySelector('.locations')){
 
             if (event.key === 'Control') { 
 
-                [mapCanada, mapAustralia, mapUK].forEach( (map, index) => {
+                [mapCanada, mapAustralia, mapUK].forEach( (map) => {
                     map.scrollWheelZoom.disable();
                 });
 
